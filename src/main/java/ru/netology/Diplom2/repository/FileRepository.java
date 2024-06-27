@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface FileRepository extends CrudRepository<File, Integer> {
     void deleteByName(String name);
 
-    Optional<File> findByNameAndUser(String name, User user);
+    Optional<File> findByName(String name);
 
-    List<File> findAllByUser (User user);
+    List<File> findAllByUserName (String userName);
 }

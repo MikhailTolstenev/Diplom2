@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Optional;
+
 @Entity
 @Data
 @Builder
@@ -28,11 +30,11 @@ public class File {
     @Column(name = "data")
     private byte[] data;
 
-//    @Column(name = "userName")
-//    private String userName;
-@ManyToOne
-@JoinColumn(name = "login")
-private User user;
+    @Column(name = "userName")
+    private String userName;
+//@ManyToOne
+//@JoinColumn(name = "login")
+//private User user;
 
 
 
